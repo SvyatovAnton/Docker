@@ -1,0 +1,9 @@
+FROM ubuntu:22.04
+LABEL author=Anton
+LABEL type=demo
+LABEL platform=YouTube
+RUN apt-get update
+RUN apt-get install apache2 -y
+EXPOSE 80 443
+CMD ["apache2ctl","-D","FOREGROUND"]
+
